@@ -1,15 +1,14 @@
 program pilas_ej1;
 
 uses
-    sysutils, 
-    uPilaChar; { 1.1 Genera una unidad pila cuyos nodos almacenen un único carácter.}
+    sysutils, uPilaChar; { 1.1 Genera una unidad pila cuyos nodos almacenen un único carácter.}
 
 
 { 1.2
     Define una función balanceada para comprobar el balance de paréntesis de una expresión aritmética.
     Una expresión aritmética está balanceada si cada paréntesis de apertura tiene un paréntesis de cierre correspondiente.
     Los paréntesis deben estar correctamente anidados.
-    No se comprobará si los paréntesis están en el lugar correcto (por ejemplo, (3+2*)5 o 3(+4-)2 no es una expresión aritmética 
+    No se comprobará si los paréntesis están en el lugar correcto (por ejemplo, (3+2*)5 o 3(+4-)2 no es una expresión aritmética
     válida pero vamos a considerarla balanceada).
     - Entradas:
         - Una cadena de caracteres que representa una expresión aritmética.
@@ -70,7 +69,7 @@ var
   p: tPilaElementos;
   i: integer;
 begin
-    WriteLn('Implementa la función balanceada');
+    WriteLn('Implementa la funcion balanceada');
     balanceada := True;
     initialize(p);
 
@@ -94,7 +93,7 @@ var
   p1,p2: tPilaElementos;
   i: integer;
 begin
-    WriteLn('Implementa la función balanceadaCorchetes');
+    WriteLn('Implementa la funcion balanceadaCorchetes');
     balanceadaCorchetes := True;
     initialize(p1);
     initialize(p2);
@@ -131,7 +130,7 @@ end;
 
 
 begin
-    WriteLn('Ejemplo #', '  Expresión', #9#9, 'Res = Esp', #9, 'OK/ERROR');
+    WriteLn('Ejemplo #', '  Expresion', #9#9, 'Res = Esp', #9, 'OK/ERROR');
     WriteLn('---------------------------------------------------------');
     WriteLn('Ejemplo 1: ', expresion1, #9#9, balanceada(expresion1), ' = ', resultado1, #9, showOkWrong(balanceada(expresion1) = resultado1));
     WriteLn('Ejemplo 2: ', expresion2, #9#9, balanceada(expresion2), ' = ', resultado2, #9, showOkWrong(balanceada(expresion2) = resultado2));
@@ -147,9 +146,4 @@ begin
     readln;
 readln;
 end.
-
-
-
-
-    
 

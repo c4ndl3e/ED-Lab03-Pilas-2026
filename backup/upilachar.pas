@@ -56,6 +56,7 @@ var
   aux: ^tNodo;
 begin
   if not isEmpty(p) then
+    new(aux);
     aux:= p;
     p:= p^.ant;
     dispose(aux);
