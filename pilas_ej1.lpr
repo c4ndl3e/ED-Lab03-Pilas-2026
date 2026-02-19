@@ -74,6 +74,7 @@ begin
     initialize(p);
 
     i:= 1;
+
     repeat
       if exp[i] = '(' then
         push(p,exp[i]);
@@ -84,6 +85,9 @@ begin
           balanceada:= False;
       i:= succ(i);
     until (not balanceada) or (i > length(exp));
+
+    if (not isEmpty(p)) then
+      balanceada:= False;
 end;
 
 
@@ -99,6 +103,7 @@ begin
     initialize(p2);
 
     i:= 1;
+
     repeat
       if exp[i] = '(' then
         push(p1,exp[i]);
@@ -111,13 +116,17 @@ begin
       if exp[i] = '[' then
         push(p2,exp[i]);
       if exp[i] = ']' then
-        if peek(p2) = ']' then
+        if peek(p2) = '[' then
           pop(p2)
         else
           balanceadaCorchetes:= False;
 
       i:= succ(i);
     until (not balanceadaCorchetes) or (i > length(exp));
+
+    if balanceadaCorchetes then
+      if (not isEmpty(p1)) or (not isEmpty(p2)) then
+        balanceadaCorchetes:= False;
 end;
 
 function showOkWrong(ok: boolean): string;
