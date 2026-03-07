@@ -9,21 +9,30 @@
         <Filename Value="pilas_ej2.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="TestPilaIntegerExtended"/>
-        <TopLine Value="82"/>
-        <UsageCount Value="20"/>
+        <TopLine Value="238"/>
+        <CursorPos X="5" Y="269"/>
+        <UsageCount Value="23"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
-        <Filename Value="uPilaIntegerExtended.pas"/>
+        <Filename Value="upilaintegerextended.pas"/>
+        <UnitName Value="uPilaIntegerExtended"/>
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="203"/>
-        <CursorPos X="48" Y="219"/>
+        <TopLine Value="338"/>
+        <UsageCount Value="11"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="pilas_ej3.pas"/>
+        <UnitName Value="PilasEj3"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="24"/>
         <UsageCount Value="10"/>
         <Loaded Value="True"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="15">
+    <JumpHistory HistoryIndex="27">
       <Position>
         <Filename Value="uPilaIntegerExtended.pas"/>
         <Caret Line="168" Column="33" TopLine="154"/>
@@ -87,6 +96,54 @@
       <Position>
         <Filename Value="uPilaIntegerExtended.pas"/>
         <Caret Line="224" Column="48" TopLine="207"/>
+      </Position>
+      <Position>
+        <Filename Value="uPilaIntegerExtended.pas"/>
+        <Caret Line="219" Column="48" TopLine="203"/>
+      </Position>
+      <Position>
+        <Filename Value="upilaintegerextended.pas"/>
+        <Caret Line="216" Column="45" TopLine="209"/>
+      </Position>
+      <Position>
+        <Filename Value="upilaintegerextended.pas"/>
+        <Caret Line="220" Column="33" TopLine="209"/>
+      </Position>
+      <Position>
+        <Filename Value="upilaintegerextended.pas"/>
+        <Caret Line="218" Column="25" TopLine="203"/>
+      </Position>
+      <Position>
+        <Filename Value="upilaintegerextended.pas"/>
+        <Caret Line="222" Column="13" TopLine="207"/>
+      </Position>
+      <Position>
+        <Filename Value="upilaintegerextended.pas"/>
+        <Caret Line="253" Column="20" TopLine="232"/>
+      </Position>
+      <Position>
+        <Filename Value="upilaintegerextended.pas"/>
+        <Caret Line="281" Column="17" TopLine="264"/>
+      </Position>
+      <Position>
+        <Filename Value="upilaintegerextended.pas"/>
+        <Caret Line="276" Column="40" TopLine="264"/>
+      </Position>
+      <Position>
+        <Filename Value="upilaintegerextended.pas"/>
+        <Caret Line="283" Column="23" TopLine="259"/>
+      </Position>
+      <Position>
+        <Filename Value="upilaintegerextended.pas"/>
+        <Caret Line="310" Column="22" TopLine="288"/>
+      </Position>
+      <Position>
+        <Filename Value="upilaintegerextended.pas"/>
+        <Caret Line="343" Column="22" TopLine="321"/>
+      </Position>
+      <Position>
+        <Filename Value="upilaintegerextended.pas"/>
+        <Caret Line="368" Column="28" TopLine="342"/>
       </Position>
     </JumpHistory>
     <RunParams>

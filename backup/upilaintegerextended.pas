@@ -212,26 +212,22 @@ implementation
     }
     procedure combinar(var p1, p2: tPilaEnterosExt);
     var
-        x: integer;
         aux: tPilaEnterosExt;
+        x: integer;
     begin
 
-        if (isEmpty(p1)) and (not (isEmpty(p2))) then
-          p1:= p2
-        else if (isEmpty(p2)) and (not (isEmpty(p1))) then
-          p1:= p1
-        else begin
-          while not isEmpty(p2) do begin
+          initialize(aux);
+          while not(isEmpty(p2)) do begin
               peek(p2,x);
               push(aux,x);
               pop(p2);
           end;
-          while not isEmpty(aux) do begin
+          while not(isEmpty(aux)) do begin
               peek(aux,x);
               push(p1,x);
               pop(aux);
           end;
-        end;
+          clear(aux);
 
     end;
 
@@ -247,8 +243,16 @@ implementation
             - popN([1, 2, 3, 4, 5], 0) -> [1, 2, 3, 4, 5]
     }
     procedure popN(var p: tPilaEnterosExt; n: integer);
-    begin  
-        WriteLn('Implementa la función popN');
+    var
+        i: integer;
+    begin
+        if n > p.tam then begin
+          while not(isEmpty(p)) do
+              pop(p);
+        end;
+        for i:=1 to n do begin
+            pop(p);
+        end;
     end;
 
     { 
@@ -263,8 +267,21 @@ implementation
             - sumarN([1, 2, 3, 4, 5], 0) -> [1, 2, 3, 4, 5]
     }
     procedure sumarN(var p: tPilaEnterosExt; n: integer);
+    var
+        sum,x,i: integer;
     begin
-        WriteLn('Implementa la función sumarN');
+        sum:= 0;
+        i:= 1;
+
+        if n <> 0 then begin
+          while (i<=n) and (not isEmpty(p)) do begin
+              peek(p,x);
+              sum:= sum + x;
+              pop(p);
+              inc(i);
+          end;
+          push(p,sum);
+        end;
     end;
 
     { 
@@ -278,8 +295,20 @@ implementation
             - invertir([1, 2, 3]) -> [3, 2, 1]
     }
     procedure invertir(var p: tPilaEnterosExt);
+    var
+        i,x: integer;
+        aux: tPilaEnterosExt;
     begin
-        WriteLn('Implementa la función invertir');
+        if p.tam <> 0 then begin
+          while not isEmpty(p) do begin
+              peek(p,x);
+              push(aux,x);
+              pop(p);
+          end;
+          p:= aux;
+        { clear(aux);    ---> No hacemos clear pq estariamos borrando los mismos
+                              nodos que hay en p}
+        end;
     end;
 
     { 
@@ -293,8 +322,26 @@ implementation
             - repetirN([1, 2, 3], 1) -> [1, 2, 3]
     }
     procedure repetirN(var p: tPilaEnterosExt; n: integer);
+    var
+        aux: tPilaEnterosExt;
+        i,x: integer;
     begin
-        WriteLn('Implementa la función repetirN');
+        if (n <> 1) and (not isEmpty(p)) then begin
+          initialize(aux);
+          while not isEmpty(p) do begin
+              for i:=1 to n do begin
+                  peek(p,x);
+                  push(aux,x);
+              end;
+              pop(p);
+          end;
+          while not isEmpty(aux) do begin
+              peek(aux,x);
+              push(p,x);
+              pop(aux);
+          end;
+          clear(aux);
+        end;
     end;
 
     { 
@@ -309,8 +356,17 @@ implementation
             - contarApariciones([1, 2, 3, 4, 5, 2], 2) -> 2
     }
     function contarApariciones(var p: tPilaEnterosExt; n: integer): integer;
+    var
+        aux: ^tNodo;
     begin
-        WriteLn('Implementa la función contarApariciones');
+        contarApariciones:= 0;
+        new(aux);
+        aux:= p.pila;
+        while aux <> NIL do begin
+            if aux^.info = n then
+                inc(contarApariciones);
+            aux:= aux^.ant;
+        end;
     end;
 
 end.
