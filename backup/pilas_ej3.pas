@@ -12,7 +12,7 @@ var
     aux: tPilaLibros;
     x: TLibro;
 begin
-    initialize(aux);
+    initialize(aux)
     while p <> NIL do begin
       peek(p,x);
       push(aux,x);

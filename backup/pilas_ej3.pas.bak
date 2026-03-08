@@ -12,8 +12,8 @@ var
     aux: tPilaLibros;
     x: TLibro;
 begin
-    initialize(aux);
-    while p <> NIL do begin
+    new(aux);
+    while tPilaLibtos <> NIL do begin
       peek(p,x);
       push(aux,x);
       pop(p);
@@ -60,5 +60,5 @@ begin
     writeln('Pila invertida:');
     imprimirPila(pila);
 
-    readln;
+    readln(libro);
 end.

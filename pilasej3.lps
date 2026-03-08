@@ -6,33 +6,15 @@
     <BuildModes Active="Default"/>
     <Units>
       <Unit>
-        <Filename Value="pilas_ej2.pas"/>
+        <Filename Value="pilasej3.pas"/>
         <IsPartOfProject Value="True"/>
-        <UnitName Value="TestPilaIntegerExtended"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="190"/>
-        <CursorPos X="5" Y="269"/>
-        <UsageCount Value="23"/>
-      </Unit>
-      <Unit>
-        <Filename Value="upilaintegerextended.pas"/>
-        <UnitName Value="uPilaIntegerExtended"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="338"/>
-        <UsageCount Value="11"/>
-      </Unit>
-      <Unit>
-        <Filename Value="pilas_ej3.pas"/>
-        <UnitName Value="PilasEj3"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="16"/>
-        <CursorPos X="31" Y="27"/>
-        <UsageCount Value="10"/>
+        <CursorPos X="21" Y="15"/>
+        <UsageCount Value="20"/>
       </Unit>
       <Unit>
         <Filename Value="uPilaLibros.pas"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="86"/>
         <UsageCount Value="10"/>
       </Unit>
       <Unit>
@@ -40,6 +22,7 @@
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="5"/>
+        <CursorPos Y="31"/>
         <UsageCount Value="10"/>
       </Unit>
     </Units>

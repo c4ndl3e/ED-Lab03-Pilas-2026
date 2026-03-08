@@ -1,4 +1,4 @@
-program PilasEj3;
+program pilasej3;
 
 uses
     sysutils, uTLibro, uPilaLibros;
